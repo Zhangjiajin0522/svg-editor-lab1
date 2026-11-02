@@ -58,14 +58,12 @@ node dist/cli/Main.js
 
 ## Git 提交
 
-仓库包含真实的分阶段提交，最终本地版本使用 `final` tag。远程地址尚未提供，本地版本尚未推送。
+仓库包含真实的分阶段提交，最终版本使用 `final` tag。远程仓库为 [Zhangjiajin0522/svg-editor-lab1](https://github.com/Zhangjiajin0522/svg-editor-lab1)，已配置为本地 `origin`。
 
-在 GitHub/Gitee 建立空仓库后，将下面的地址替换为自己的仓库地址：
+本地开发历史已与远程初始化提交合并。同步 main 分支和 final 标签：
 
 ```sh
-git remote add origin <仓库地址>
-git push -u origin main
-git push origin final
+git push --atomic -u origin main refs/tags/final
 ```
 
 `final` 须在课程截止时间之前推送；具体截止时间和提交入口以课程通知为准。
