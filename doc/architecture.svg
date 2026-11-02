@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#475569"/></marker></defs>
+  <rect width="960" height="560" rx="16" fill="#f8fafc"/>
+  <g font-family="Arial, sans-serif" fill="#0f172a">
+    <text x="40" y="38" font-size="20" font-weight="bold">SVG Editor · Module dependencies</text>
+    <g fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M390 135 L230 220"/><path d="M570 135 L730 220"/>
+      <path d="M480 150 L480 430"/><path d="M230 320 L390 430"/><path d="M730 320 L570 430"/>
+      <path d="M600 270 L360 270" stroke-dasharray="7 5"/>
+    </g>
+    <g font-size="13" text-anchor="middle" fill="#475569">
+      <text x="285" y="170">dispatch</text><text x="700" y="170">Main: assemble</text>
+      <rect x="487" y="333" width="156" height="24" fill="#f8fafc"/><text x="563" y="350">Main: create factory</text>
+      <rect x="387" y="242" width="186" height="22" fill="#f8fafc"/><text x="480" y="258">DocumentStore interface</text>
+      <text x="270" y="384">edit model</text><text x="690" y="384">encode / decode</text>
+    </g>
+    <g stroke="#94a3b8" stroke-width="1.5">
+      <rect x="370" y="70" width="220" height="80" rx="10" fill="#dbeafe"/>
+      <rect x="100" y="220" width="260" height="100" rx="10" fill="#e0e7ff"/>
+      <rect x="600" y="220" width="260" height="100" rx="10" fill="#fef3c7"/>
+      <rect x="370" y="430" width="220" height="90" rx="10" fill="#dcfce7"/>
+    </g>
+    <g fill="#475569"><polygon points="230,220 238.25,209.95 242.94,218.79"/><polygon points="730,220 717.06,218.79 721.75,209.95"/><polygon points="480,430 475.00,418.00 485.00,418.00"/><polygon points="390,430 377.28,427.32 382.94,419.08"/><polygon points="570,430 577.06,419.08 582.72,427.32"/><polygon points="360,270 372.00,265.00 372.00,275.00"/></g>
+    <g text-anchor="middle">
+      <text x="480" y="103" font-size="21" font-weight="bold">cli</text><text x="480" y="129" font-size="14">REPL · Tokenizer · Main</text>
+      <text x="230" y="256" font-size="21" font-weight="bold">application</text><text x="230" y="282" font-size="14">Commands · History · Session</text><text x="230" y="303" font-size="14">DocumentStore port</text>
+      <text x="730" y="256" font-size="21" font-weight="bold">infrastructure</text><text x="730" y="282" font-size="14">SvgCodec · FileDocumentStore</text><text x="730" y="303" font-size="14">XML library · Filesystem</text>
+      <text x="480" y="466" font-size="21" font-weight="bold">domain</text><text x="480" y="493" font-size="14">Shapes · Groups · Document</text>
+    </g>
+  </g>
+</svg>

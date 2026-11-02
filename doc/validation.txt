@@ -1,0 +1,88 @@
+
+> svg-editor-lab1@0.1.0 check
+> npm test
+
+
+> svg-editor-lab1@0.1.0 test
+> npm run build && node --experimental-strip-types --test test/*.test.ts
+
+
+> svg-editor-lab1@0.1.0 build
+> node --experimental-strip-types scripts/Build.ts
+
+(node:17990) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18000) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ module imports follow the documented dependency direction (21.550917ms)
+✔ each production class has its own matching file; no tag switch dispatch (7.694792ms)
+(node:18001) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ CLI replays the assignment flowchart, writes browser-readable SVG and reads it back (156.418792ms)
+✔ batch errors return nonzero after processing remaining commands, with one-line errors (120.721417ms)
+✔ compiled CLI runs without TypeScript stripping (42.108083ms)
+(node:18002) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ one-step undo/redo restores exact tree and order: create ellipse e 1 2 3 4 in nested (4.09125ms)
+✔ one-step undo/redo restores exact tree and order: delete nested (0.756584ms)
+✔ one-step undo/redo restores exact tree and order: move scene 20 -30 (0.594584ms)
+✔ one-step undo/redo restores exact tree and order: scale scene 2 (0.424167ms)
+✔ one-step undo/redo restores exact tree and order: set a width 20 (0.272542ms)
+✔ one-step undo/redo restores exact tree and order: set t text "new content" (0.92625ms)
+✔ one-step undo/redo restores exact tree and order: set nested fill blue (0.501833ms)
+✔ one-step undo/redo restores exact tree and order: group combined b nested (0.56075ms)
+✔ one-step undo/redo restores exact tree and order: ungroup nested (0.771959ms)
+✔ one-step undo/redo restores exact tree and order: addto nested b (0.68375ms)
+✔ one-step undo/redo restores exact tree and order: front nested (0.278959ms)
+✔ one-step undo/redo restores exact tree and order: back t (0.33275ms)
+✔ tokenizer preserves colors, empty text, quoted paths and escaped quotes (0.446625ms)
+✔ help works before initialization, other document operations require a document (0.264125ms)
+✔ failed edits and parser errors preserve document and redo branch (0.768834ms)
+✔ recursive operation overflow after an earlier child changed remains atomic (0.324292ms)
+✔ display commands retain redo, successful new edit clears it (1.3345ms)
+✔ successful IO blocks both history directions: init (0.960917ms)
+✔ successful IO blocks both history directions: read saved.svg (3.885875ms)
+✔ successful IO blocks both history directions: save saved.svg (0.115625ms)
+✔ successful IO blocks both history directions: canvas 100 200 (0.114959ms)
+✔ failed IO keeps state, path and history; save remembers a successful explicit path (0.312958ms)
+✔ all native create types, decimal/scientific coordinates, nested grouping, and z-order (0.963167ms)
+✔ missing and extra arguments are rejected without changing state (0.63575ms)
+✔ optional canvas width preserves height and blocks history (0.224875ms)
+(node:18003) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ six polymorphic shapes clone and scale geometry without scaling paint (1.893125ms)
+✔ group uses document order, ungroup keeps sibling positions, cycles are refused (0.920167ms)
+✔ ids and attribute whitelist are enforced (0.23775ms)
+(node:18004) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ assignment external SVG imports all seven elements and assigns missing id (5.840166ms)
+✔ auto-id allocation reserves explicit ids appearing later and respects case (0.213792ms)
+✔ XML text entities, CDATA, Unicode and whitespace survive round-trip (0.708209ms)
+✔ inherited SVG root styles survive clones, edits and serialization (0.3795ms)
+✔ reject unsupported or malformed input: <svg><rect id="same"/><g id="same"/></svg> (0.191334ms)
+✔ reject unsupported or malformed input: <svg><rect></svg> (0.078458ms)
+✔ reject unsupported or malformed input: <svg/><svg/> (0.170083ms)
+✔ reject unsupported or malformed input: <rect/> (0.108708ms)
+✔ reject unsupported or malformed input: <svg><path id="p"/></svg> (0.234291ms)
+✔ reject unsupported or malformed input: <svg><rect id="r" transform="rotate(30)"/></svg> (1.510584ms)
+✔ reject unsupported or malformed input: <svg><rect id="r"><circle id="c"/></rect></svg> (0.696541ms)
+✔ reject unsupported or malformed input: <svg><text id="t"><g id="g"/></text></svg> (0.419292ms)
+✔ reject unsupported or malformed input: <svg><g id="g">not allowed</g></svg> (0.120208ms)
+✔ reject unsupported or malformed input: <svg><text id="t">&bogus;</text></svg> (0.036917ms)
+✔ reject unsupported or malformed input: <svg><text id="t">&#0;</text></svg> (0.083792ms)
+✔ reject unsupported or malformed input: <svg><text id="t">&#x110000;</text></svg> (0.223416ms)
+✔ reject unsupported or malformed input: <!DOCTYPE svg [<!ENTITY a "injected">]><svg/> (0.0865ms)
+✔ reject unsupported or malformed input: <svg xmlns="urn:other"/> (0.22125ms)
+✔ reject unsupported or malformed input: <svg width="100" height="100" viewBox="1 1 50 50"/> (0.237333ms)
+✔ reject unsupported or malformed input: <svg><rect id="r" width="-1"/></svg> (0.312667ms)
+✔ reject unsupported or malformed input: <svg><rect id="r" x="NaN"/></svg> (0.23125ms)
+✔ reject unsupported or malformed input: <svg><g id="with spaces"/></svg> (0.176291ms)
+✔ read/write filesystem errors and malformed reads preserve live document and history (4.920666ms)
+ℹ tests 56
+ℹ suites 0
+ℹ pass 56
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 439.080875

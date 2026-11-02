@@ -1,0 +1,12 @@
+@startuml
+package "cli" as CLI
+package "application" as APP
+package "domain" as DOMAIN
+package "infrastructure" as INFRA
+CLI --> APP
+CLI --> INFRA : Main 组装
+CLI --> DOMAIN : Main 创建工厂
+APP --> DOMAIN
+INFRA --> DOMAIN
+INFRA ..> APP : 实现 DocumentStore 接口
+@enduml
