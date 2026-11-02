@@ -42,7 +42,7 @@ declare module 'fast-xml-parser' {
     constructor(options: {
       preserveOrder: boolean; ignoreAttributes: boolean; attributeNamePrefix: string;
       parseTagValue: boolean; parseAttributeValue: boolean; trimValues: boolean;
-      ignoreDeclaration: boolean; ignorePiTags: boolean; processEntities: boolean;
+      ignoreDeclaration: boolean; ignorePiTags: boolean; processEntities: boolean; htmlEntities: boolean;
     });
     parse(xml: string): unknown;
   }

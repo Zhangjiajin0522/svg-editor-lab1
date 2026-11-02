@@ -6,7 +6,7 @@ export class HelpCommand extends Command {
   override execute(_session: EditorSession, values: readonly string[]): string[] {
     new CommandArguments(values, 'help').expect(0);
     return [
-      'init [w] [h] | read <file.svg> | save [file.svg] | canvas [w h]',
+      'init [w] [h] | read <file.svg> | save [file.svg] | canvas [w] [h]',
       'create rect <id> <x> <y> <w> <h> [fill] [in <containerId>]',
       'create circle <id> <cx> <cy> <r> [fill] [in <containerId>]',
       'create ellipse <id> <cx> <cy> <rx> <ry> [fill] [in <containerId>]',

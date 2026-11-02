@@ -7,8 +7,8 @@
   "scripts": {
     "build": "node --experimental-strip-types scripts/Build.ts",
     "cli": "node --experimental-strip-types src/cli/Main.ts",
-    "test": "node --experimental-strip-types --test test/*.test.ts",
-    "check": "npm run build && npm test"
+    "test": "npm run build && node --experimental-strip-types --test test/*.test.ts",
+    "check": "npm test"
   },
   "engines": {
     "node": ">=22.18.0"

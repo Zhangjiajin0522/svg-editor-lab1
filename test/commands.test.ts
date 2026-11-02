@@ -126,7 +126,15 @@ test('all native create types, decimal/scientific coordinates, nested grouping, 
 
 test('missing and extra arguments are rejected without changing state', () => {
   const e = new TestEditor(); e.setup(); const before = e.snapshot();
-  for (const command of ['init 1 2 3', 'canvas 1', 'read', 'save a b', 'create', 'delete', 'move a 1', 'scale a', 'set a fill', 'group g', 'ungroup', 'addto scene', 'front', 'back a b', 'tree a b', 'show', 'undo extra', 'redo extra', 'help extra']) {
+  for (const command of ['init 1 2 3', 'canvas 1 2 3', 'read', 'save a b', 'create', 'delete', 'move a 1', 'scale a', 'set a fill', 'group g', 'ungroup', 'addto scene', 'front', 'back a b', 'tree a b', 'show', 'undo extra', 'redo extra', 'help extra']) {
     e.error(command, /usage:/); assert.equal(e.snapshot(), before, command);
   }
+});
+
+test('optional canvas width preserves height and blocks history', () => {
+  const e = new TestEditor(); e.ok('init 50');
+  assert.deepEqual(e.ok('canvas'), ['canvas 50x600']);
+  e.ok('create g g'); e.ok('canvas 100');
+  assert.deepEqual(e.ok('canvas'), ['canvas 100x600']);
+  e.error('undo', /undo not allowed after io command/);
 });

@@ -29,7 +29,7 @@ export class SvgCodec {
     const parser = new XMLParser({
       preserveOrder: true, ignoreAttributes: false, attributeNamePrefix: '',
       parseTagValue: false, parseAttributeValue: false, trimValues: false,
-      ignoreDeclaration: true, ignorePiTags: true, processEntities: true,
+      ignoreDeclaration: true, ignorePiTags: true, processEntities: true, htmlEntities: true,
     });
     const nodes = (parser.parse(xml) as Record<string, unknown>[]).filter(node => !('#text' in node && !String(node['#text']).trim()));
     if (nodes.length !== 1) throw new Error('expected one svg root element');
