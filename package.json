@@ -5,12 +5,19 @@
   "type": "module",
   "description": "Lab1 Phase 1 object-oriented SVG command-line editor",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "node --experimental-strip-types scripts/Build.ts",
     "cli": "node --experimental-strip-types src/cli/Main.ts",
     "test": "node --experimental-strip-types --test test/*.test.ts",
     "check": "npm run build && npm test"
   },
-  "engines": { "node": ">=22.18.0" },
-  "dependencies": { "fast-xml-parser": "^5.3.0" },
-  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.9.0" }
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "dependencies": {
+    "fast-xml-parser": "5.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.5",
+    "typescript": "6.0.3"
+  }
 }

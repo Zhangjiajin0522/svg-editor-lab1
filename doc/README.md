@@ -68,3 +68,10 @@ domain 不依赖其他工程模块；application 只依赖 domain；infrastructu
 ## 质量保证手段
 
 计划覆盖命令正常路径、错误后状态不变、嵌套组合、撤销重做、SVG 往返和命令脚本回放。最终执行结果在完成后填写。
+
+### 迭代 1：图形模型
+
+- 实现 Shape → GeometryShape → Rect/Circle/Ellipse/Line/TextShape，以及 Group 组合结构；模型不读取文件或输出终端。
+- 对未明确规定的跨父容器 group，决定以文档深度优先顺序收集选中元素，放入最近公共祖先下的新组，新组插入首个选中分支的位置。组内顺序不依赖命令参数顺序。
+- 第一轮 3 项模型测试通过，覆盖六种类型、深拷贝、嵌套几何变化、顺序、循环防护及属性白名单。
+- npm 网络连接失败；从本机现有应用复制已安装依赖到被 Git 忽略的 node_modules，用 TypeScript compiler API 完成严格编译。package.json 和 lockfile 记录版本及公共 registry 地址。此时尚未验证联网全新安装。
