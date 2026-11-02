@@ -79,6 +79,9 @@ export class SvgDocument {
   }
   clone(): SvgDocument {
     const copy = new SvgDocument(this.width, this.height);
+    for (const [name, value] of Object.entries(this.root.getAttributes())) {
+      if (name !== 'id') copy.root.setAttribute(name, value);
+    }
     for (const child of this.root.getChildren()) copy.root.insert(child.clone());
     return copy;
   }
